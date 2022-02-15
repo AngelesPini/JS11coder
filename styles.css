@@ -1,0 +1,185 @@
+nav {
+  background-color: #f1c40f;
+  color: black;
+  display: grid;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#search {
+  text-align: center;
+  width: 500px;
+}
+form {
+  text-align: center;
+}
+h1 {
+  color: black;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 50px;
+}
+.seleccion {
+  text-align: center;
+}
+#selecPlatos {
+  width: 50%;
+  margin: 100px auto 100px auto;
+}
+
+#boton-mesa {
+  position: fixed;
+  border: none;
+  color: black;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 10%;
+  transition: all 0.3s;
+  margin: 5px auto 0px 1290px;
+}
+#boton-mesa:hover {
+  color: white;
+  background-color: black;
+  border: #f1c40f;
+}
+#boton-mesa:focus {
+  outline: none;
+}
+
+#la-carta {
+  max-width: 1200px;
+  margin: 60px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+p {
+  line-height: 1.8;
+}
+.plato {
+  max-width: 30%;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+select {
+  display: inline;
+  text-align: center;
+  border: 1px solid #f1c40f;
+}
+.modal-contenedor {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 5;
+}
+
+.modal-mesa {
+  position: relative;
+  background-color: white;
+  min-width: 700px;
+  padding: 20px;
+  margin-top: -100%;
+  transition: all 0.5s;
+}
+
+.modal-active .modal-mesa {
+  margin-top: 0;
+}
+
+.modal-mesa h3 {
+  color: black;
+  padding-bottom: 5px;
+}
+.modal-mesa #carritoCerrar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  color: black;
+  border: none;
+  background-color: white;
+}
+.modal-mesa #carritoCerrar:hover {
+  cursor: pointer;
+}
+.modal-mesa #carritoCerrar:focus {
+  outline: none;
+}
+.modal-mesa .precioPlato {
+  padding-top: 10px;
+}
+.card .card-image .card-title {
+  color: #f1c40f;
+  position: unset;
+}
+.card {
+  width: 300px;
+  height: 250px;
+  text-align: center;
+}
+#btn-floating {
+  width: 30px;
+  height: 5px;
+}
+.btn {
+  background-color: #f1c40f;
+  font-size: 14pt;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: auto;
+}
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+.platoEnMesa {
+  border-left: 5px solid;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.platoEnMesa:hover {
+  border-left: 5px solid rgb(225, 76, 65);
+}
+
+.boton-eliminar {
+  background-color: white;
+  color: #f1c40f;
+  border: none;
+  font-size: 20px;
+}
+
+.boton-eliminar:hover {
+  cursor: pointer;
+}
+.boton-eliminar:focus {
+  outline: none;
+}
+button #mesaCerrar {
+  position: absolute;
+  text-align: end;
+}
