@@ -53,7 +53,7 @@ function mostrarPlatos(array){
     
 
     btnAgregar.addEventListener('click',()=>{
-
+    // LIBRERÍA TOASTIFY
         agregarAmiMesa(plato.id)
         Toastify({
 
