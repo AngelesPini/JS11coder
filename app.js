@@ -10,27 +10,19 @@ const selecPlatos = document.getElementById('selecPlatos');
 const buscador = document.getElementById('search');
 
 
-
 // filtro de busqueda
-selecPlatos.addEventListener('change',()=>{
-    if(selecPlatos.value == 'all'){
-        mostrarPlatos(stockPlatos)
-    }else{
-        mostrarPlatos(stockPlatos.filter(el => el.tipo == selecPlatos.value))
 
-    }
+selecPlatos.addEventListener('change',()=>{
+// operadores ternarios (if.....else)
+    selecPlatos.value == 'all' ? mostrarPlatos(stockPlatos) : mostrarPlatos(stockPlatos.filter(el => el.tipo == selecPlatos.value))
 })
 
 // SEARCH
 
 buscador.addEventListener('input', ()=>{
-    if (buscador.value == "") {
-        mostrarPlatos(stockPlatos)
-    }else{
-        mostrarPlatos(stockPlatos.filter(el => el.nombre.toLocaleLowerCase().includes(buscador.value.toLocaleLowerCase())))
-    }
+// operador ternario (if....else)
+    buscador.value == "" ? mostrarPlatos(stockPlatos) : mostrarPlatos(stockPlatos.filter(el => el.nombre.toLocaleLowerCase().includes(buscador.value.toLocaleLowerCase())))
 })
-
 
 //==========================================
 
@@ -63,7 +55,13 @@ function mostrarPlatos(array){
     btnAgregar.addEventListener('click',()=>{
 
         agregarAmiMesa(plato.id)
-        alert("agregaste a tu mesa " + nombre + cantidad)
+        Toastify({
+
+            text: "Agregaste a tu mesa " + plato.cantidad + " plato de " + plato.nombre + " con salsa " + plato.salsa,
+            
+            duration: 3000
+            
+            }).showToast();
     })
     }
 }

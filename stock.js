@@ -1,3 +1,4 @@
+
 let stockPlatos = [
     {id: 1, nombre: "TALLARINES", cantidad: 1, tipo: "Pasta", precio: 500, salsa: "blanca"},
     {id: 2, nombre: "TALLARINES", cantidad: 1, tipo: "Pasta", precio: 500, salsa: "roja"},
