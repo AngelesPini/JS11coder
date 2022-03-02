@@ -10,6 +10,25 @@ const selecPlatos = document.getElementById('selecPlatos');
 const buscador = document.getElementById('search');
 
 
+
+// FETCH
+const fetchHP = characters => {
+    const { dateOfBirth , gender } = characters.name;
+    fetch(`http://hp-api.herokuapp.com/api/characters`)
+    .then(response => response.json())
+    .then(data => obtenido(data));
+}
+
+const obtenido = data=>{
+    const{name,main:{species}}=data
+    console.log(name,species);
+
+}
+
+const onLoad = () =>{
+    navigator.fetchHP
+}
+console.log(fetchHP)
 // filtro de busqueda
 
 selecPlatos.addEventListener('change',()=>{
